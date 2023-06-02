@@ -29,9 +29,9 @@ data-bs-target="#property-modal"
 <script>
 $(function(){
 	$('h5').on('click', function() {
-		var id = $(this).data('id');
-		$('.modal-body').load(`?handler=propertydetails&id=${id}`);
-	});
+        const id = $(this).data('id');
+        $('.modal-body').load(`?handler=propertydetails&id=${id}`);
+    });
 });
 </script>
 }

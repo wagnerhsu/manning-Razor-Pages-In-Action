@@ -7,7 +7,7 @@
 
         public async Task InvokeAsync(HttpContext context, ILogger<IpAddressMiddleware> logger) 
         {
-            var ipAddress = context.Connection.RemoteIpAddress;
+            var ipAddress = context.Connection.RemoteIpAddress.MapToIPv4();
             logger.LogInformation($"Visitor is from {ipAddress}"); 
             await _next(context); 
         }
